@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        text-align: center;
+        max-width: 300px;
+        width: 100%;
+        padding: 20px;
+      }
+      .formulario {
+        border: solid 1px;
+        border-radius: 16px;
+        padding: 10px;
+      }
+      .input {
+        border: solid 1px;
+        border-radius: 8px;
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 20px;
+      }
+      #envio {
+        background-color: red;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      #mensaje {
+        max-width: 260px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Formulario de registro</h2>
+      </div>
+      <div class="formulario">
+        <form>
+          <input
+            type="text"
+            class="input"
+            id="name"
+            placeholder="Nombre de Usuario"
+          />
+          <input
+            type="email"
+            class="input"
+            id="email"
+            placeholder="Correo electrónico"
+          />
+          <input
+            type="submit"
+            class="input"
+            id="envio"
+            value="Enviar"
+            onclick="envioForm()"
+          />
+        </form>
+        <div id="mensaje"></div>
+      </div>
+    </div>
+    <script>
+      function envioForm() {
+        const name = document.getElementById("name").value
+        const Bienvenida = document.getElementById("mensaje")
+        Bienvenida.textContent = `¡Bienvenido,  ${name}!, Gracias por participar en el formulario`
+        Bienvenida.style.display = "block"
+        event.preventDefault()
+      }
+    </script>
+  </body>
+</html>
