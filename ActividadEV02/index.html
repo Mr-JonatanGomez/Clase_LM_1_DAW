@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head lang="es">
+    <title>Freak Collection</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styloEva2.css" type="text/css" />
+    <script>
+      function toggleRequired() {
+        var email = document.getElementById("email")
+        var password = document.getElementById("password")
+
+        // Verificar si el botón INICIAR SESIÓN fue presionado
+        if (event.target.classList.contains("boton")) {
+          email.setAttribute("required", "")
+          password.setAttribute("required", "")
+        } else {
+          // De lo contrario, quitar el atributo required
+          email.removeAttribute("required")
+          password.removeAttribute("required")
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="contenedorGlobal">
+      <header class="headerPrincipal">
+        <h1>FREAK COLLECTION</h1>
+      </header>
+      <div class="central">
+        <!-- SIN CONTAR CABECERA -->
+        <form class="rellenable">
+          <section>
+            <fieldset class="registro">
+              <legend>INICIO DE SESIÓN</legend>
+              <div>
+                <label for="nombre">Email: </label><br />
+                <input
+                  type="email"
+                  size="40"
+                  id="email"
+                  name="email"
+                  placeholder="Introduce un email vinculado a tu usuario"
+                  required=""
+                /><br /><br />
+
+                <label for="password">Contraseña: </label><br />
+                <input
+                  type="password"
+                  size="40"
+                  id="password"
+                  name="password"
+                  placeholder="Introduce contraseña, minimo 8 caracteres"
+                  pattern=".{8,}"
+                />
+                <br /><br />
+
+                <!--Boton  de enviar, para poder redirigir a otra pagina tuve que cambiar el submit, por un button-->
+                <input
+                  class="boton"
+                  type="submit"
+                  value="INICIAR SESION"
+                  formaction="paginaInicio.html"
+                  onclick="toggleRequired(event)"
+                />
+
+                <label style="font-weight: bold">
+                  <input type="checkbox" name="sesion" />
+                  Mantener sesion iniciada </label
+                ><br /><br />
+              </div>
+            </fieldset>
+
+            <fieldset class="registro">
+              <legend>REGISTRO</legend>
+              <div>
+                <p class="aviso">Si no estás registrado, debes registrarte.</p>
+                <input
+                  class="boton2"
+                  type="submit"
+                  value="REGISTRATE"
+                  formaction="Registro.html"
+                  onclick="toggleRequired(event)"
+                />
+                <br /><br /><br />
+              </div>
+            </fieldset>
+          </section>
+        </form>
+      </div>
+      <footer class="footerPrincipal">
+        <h2>FINAL</h2>
+      </footer>
+    </div>
+  </body>
+</html>

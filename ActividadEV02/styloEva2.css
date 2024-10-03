@@ -1,0 +1,347 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  /* evita los bordes ajustando al marco*/
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+  background-size: cover;
+}
+.contenedorGlobal {
+  width: 100%; /*80% sobre el total del ancho del DIV GENERAL*/
+  height: 720px;
+  margin: 0 auto; /*Margen automatico*/
+  background-image: url("pics/foto funko - copia.jpg");
+  background-size: cover;
+}
+
+.contenedorGlobal2 {
+  width: 100%; /*80% sobre el total del ancho del DIV GENERAL*/
+  height: 100%;
+  margin: 0 auto; /*Margen automatico*/
+  background-image: url("pics/foto funko - copia.jpg");
+  background-size: cover;
+}
+
+.contenedorGlobal3 {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 735px;
+  margin: 0 auto;
+
+  background-size: cover;
+}
+
+.central {
+  width: 80%; /*80% sobre el total del ancho del DIV GENERAL*/
+  /*margin: 0 auto; Margen automatico*/
+  min-width: 480px; /* Establece el ancho mínimo deseado */
+  height: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px auto;
+
+  background-image: url("pics/IMG_libros.jpg");
+  /*opacity: 0.5;*/
+  background-size: cover;
+
+  border: 2px ridge red;
+  border-radius: 6px;
+  box-shadow: 0 5px 25px 15px black; /* px horizontal, vertical, difuminado*, grosor*/
+}
+
+legend {
+  border-radius: 7px;
+}
+
+.rellenable {
+  color: white;
+
+  margin: 15px auto; /*Margen automatico*/
+  min-width: 400px; /* Establece el ancho mínimo deseado */
+  width: 50%; /*80% sobre el total del ancho del DIV GENERAL*/
+  height: 80%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  opacity: 100;
+
+  border: 1px dashed gray;
+  border-radius: 6px;
+}
+
+.rellenable2 {
+  color: white;
+
+  margin: 15px auto; /*Margen automatico*/
+
+  min-width: 400px; /* Establece el ancho mínimo deseado */
+  width: 70%; /*80% sobre el total del ancho del DIV GENERAL*/
+  height: 80%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  opacity: 100;
+
+  border: 1px dashed gray;
+  border-radius: 6px;
+}
+
+.headerPrincipal,
+.footerPrincipal {
+  font-weight: bold;
+  -webkit-text-stroke: 1px yellow; /* borde para letras */
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto 0 0 0; /*margin establece el margen para los cuatro lados*/
+
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top: 4px double black;
+  border-bottom: 4px double black;
+}
+
+.boton {
+  background-color: green;
+  color: white;
+  height: 30px;
+  font-weight: bold;
+}
+.boton:hover {
+  background-color: greenyellow; /* Color de fondo del botón al pasar el mouse */
+  color: black; /* Color del texto al pasar el mouse */
+  box-shadow: 0 0 10px 5px green; /* px horizontal, vertical, difuminado*, grosor*/
+}
+
+.boton2 {
+  background-color: darkblue;
+  color: white;
+  height: 30px;
+  font-weight: bold;
+}
+.boton2:hover {
+  background-color: blue; /* Color de fondo del botón al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+  box-shadow: 0 0 10px 5px aqua; /* px horizontal, vertical, difuminado*, grosor*/
+}
+
+.boton3 {
+  background-color: red;
+  color: white;
+  height: 30px;
+  font-weight: bold;
+}
+.boton3:hover {
+  background-color: greenyellow; /* Color de fondo del botón al pasar el mouse */
+  color: black; /* Color del texto al pasar el mouse */
+  box-shadow: 0 0 10px 5px green; /* px horizontal, vertical, difuminado*, grosor*/
+}
+
+/*SOLO PARA HOMEPAGE*/
+.headerHomepage {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto 0 0 0;
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  padding-bottom: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top: 4px double black;
+  border-bottom: 4px double black;
+  z-index: 6;
+}
+
+.headerHomepage :hover {
+  color: black;
+  box-shadow: 0 0 -10px 5px green;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-size: 15px;
+  font-variant: small-caps;
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #456789;
+}
+
+.titHor {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.titNav {
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0px 0px 5px purple;
+  text-align: center;
+}
+
+#horizontal {
+  position: relative;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 308px;
+  margin-right: 5px;
+  z-index: 5;
+}
+
+#horizontal ul {
+  margin: 0 auto;
+  max-width: 92%;
+}
+
+#horizontal li {
+  display: inline-block;
+}
+
+#horizontal a {
+  margin: 5px;
+  width: 190px;
+  border-radius: 5px;
+  color: white;
+  background-color: darkred;
+}
+
+#horizontal a:hover {
+  color: darkred;
+  background-color: white;
+  border-bottom: 5px solid darkred;
+  box-shadow: 0 0 10px 5px white;
+}
+
+.fieldHor {
+  border-color: transparent;
+}
+
+#vertical {
+  margin-top: -100px;
+  max-width: 280px;
+  padding-left: 25px;
+  margin-left: 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+#vertical a {
+  font-size: 18px;
+  font-variant: small-caps;
+  color: purple;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: gold;
+  border-radius: 5px;
+}
+
+#vertical a:hover {
+  color: gold;
+  background-color: purple;
+  border-right: 5px solid gold;
+  box-shadow: 0 0 10px 5px gold;
+}
+
+.fieldVer {
+  border-radius: 5px;
+  width: 280px;
+  margin-left: -25px;
+}
+
+.centroInicio {
+  position: absolute;
+  top: calc(
+    37% + 100px
+  ); /* Ajusta la posición vertical, considerando la altura de #horizontal */
+  left: 308px;
+  right: 5px;
+  margin-top: 20px;
+  max-height: 63%;
+  max-width: calc(100% - 313px);
+
+  border-radius: 5px;
+  text-align: center;
+  z-index: 4;
+}
+
+.fieldCentro {
+  margin-left: 0px;
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+  float: none;
+
+  border: none;
+  z-index: 3;
+}
+.fieldCentro2 {
+  /*corregir error*/
+
+  margin-top: -530px;
+  margin-left: 0px;
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 300px;
+  width: 100%;
+  float: none;
+
+  border: none;
+  z-index: 2;
+}
+h3 {
+  color: white;
+}
+.card {
+  width: 189px;
+  height: 267px;
+  margin: 7px;
+  border: double 2px black;
+}
+
+.card:hover {
+  background-color: blue;
+  border-bottom: 5px solid purple;
+  box-shadow: 0 0 10px 5px gold;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 feb 2024, 15:51:13
+    Author     : gomez
+*/

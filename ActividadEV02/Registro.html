@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head lang="es">
+    <title>Registro de Usuarios</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styloEva2.css" type="text/css" />
+
+    <script>
+      function validarPassword() {
+        var password = document.getElementById("password").value
+        var confirmPassword = document.getElementById("confirmPassword").value
+        var mensajeError = document.getElementById("mensajeError")
+
+        if (password !== confirmPassword) {
+          mensajeError.textContent = "Las contraseñas no coinciden."
+          return false // Evitar el envío del formulario
+        } else {
+          mensajeError.textContent = ""
+          return true // Permitir el envío del formulario
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="contenedorGlobal2">
+      <header class="headerPrincipal">
+        <h1>FREAK COLLECTION</h1>
+      </header>
+      <div class="central">
+        <!-- SIN CONTAR CABECERA -->
+        <form class="rellenable2" onsubmit="return validarPassword()">
+          <section>
+            <fieldset class="registro">
+              <legend>REGISTRO DE USUARIO</legend>
+              <div>
+                <label for="nombre">Nombre: </label><br />
+                <input
+                  type="text"
+                  size="40"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Introduce aquí tu nombre"
+                /><br /><br />
+
+                <label for="nombre">Apellidos: </label><br />
+                <input
+                  type="text"
+                  size="40"
+                  id="apellidos"
+                  name="apellidos"
+                  placeholder="Introduce aquí tus apellidos"
+                /><br /><br />
+
+                <label for="email">Mail de contacto: </label><br />
+                <input
+                  type="email"
+                  size="40"
+                  id="email"
+                  name="email"
+                  placeholder="Introduce un email valido"
+                  required=""
+                /><br /><br />
+
+                <label for="password">Contraseña: </label>
+                <input
+                  type="password"
+                  size="40"
+                  id="password"
+                  name="password"
+                  placeholder="Introduce contraseña, minimo 8 caracteres"
+                  pattern=".{8,}"
+                /><br /><br />
+
+                <label for="confirmPassword">Confirmar contraseña: </label>
+                <input
+                  type="password"
+                  size="40"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Confirme su contraseña"
+                  oninput="validarPassword()"
+                /><br />
+                <span id="mensajeError" style="color: red"></span><br /><br />
+
+                <label for="fecha_dia">Fecha de Nacimiento: </label><br />
+                <input class="casillero" type="date" />
+                <br /><br />
+
+                <label for="genero">Género: </label><br />
+                <select id="genero" name="genero" required>
+                  <option value="" selected>-Elije género-</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Prefiero_no_decirlo">
+                    Prefiero no decirlo
+                  </option></select
+                ><br /><br />
+
+                <label for="genero">País de residencia </label><br />
+                <select id="pais" name="pais" required>
+                  <option value="" selected>-País de residencia-</option>
+                  <option value="01">USA</option>
+                  <option value="02">Canadá</option>
+                  <option value="03">Australia</option>
+                  <option value="04">UK</option>
+                  <option value="05">Alemania</option>
+                  <option value="06">Japón</option>
+                  <option value="07">Francia</option>
+                  <option value="08">Italia</option>
+                  <option value="09">España</option>
+                  <option value="10">Paises Bajos</option></select
+                ><br /><br />
+
+                <label style="font-weight: bold">
+                  <input type="checkbox" name="condiciones" required /><br />
+                  Acepto los términos </label
+                ><br /><br />
+                <!--Boton  de enviar, para poder redirigir a otra pagina tuve que cambiar el submit, por un button-->
+                <input
+                  class="boton3"
+                  type="submit"
+                  value="REGISTRARSE"
+                  formaction="index.html"
+                />
+              </div>
+            </fieldset>
+          </section>
+        </form>
+      </div>
+      <footer class="footerPrincipal">
+        <h2></h2>
+      </footer>
+    </div>
+  </body>
+</html>
